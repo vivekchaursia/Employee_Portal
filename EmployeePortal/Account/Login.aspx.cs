@@ -52,7 +52,7 @@ namespace EmployeePortal.Account
             {
                 if (Convert.ToInt16(dt.Rows[0]["CNT"].ToString()) != 0)
                 {
-                    //ScriptManager.RegisterStartupScript(this, this.GetType(), "msg", "alert('User registered successfully now proceed with Login');", true);
+                    
                     Session["UserID"]=dt.Rows[0]["CNT"].ToString();
                     Session["UserName"] = UserName.Text.ToString();
                     Response.Redirect("UserLanding.aspx");

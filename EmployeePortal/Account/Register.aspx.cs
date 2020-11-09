@@ -19,7 +19,7 @@ namespace EmployeePortal.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
+            
             
         }
 
@@ -49,9 +49,7 @@ namespace EmployeePortal.Account
                                     cmd.Parameters.AddWithValue("@password", Encrypt(Password.Text.ToString()));
                                     cmd.Parameters.AddWithValue("@ContentType", contentType);
                                     cmd.Parameters.AddWithValue("@ProfilePic", bytes);
-                                    //con.Open();
-                                    //i = cmd.ExecuteNonQuery();
-                                    //con.Close();
+                                    
                                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                                     da.Fill(dt);
                                 }
